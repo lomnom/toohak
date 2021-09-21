@@ -114,7 +114,7 @@ struct QuizView: View{
                         Divider()
                         Spacer()
                         VStack{
-                            Text("queStIoN: \(question)")
+                            Text("queStIoN: \(question)/\(quiz.questions.count)")
                                 .font(.system(size: 20))
                                 .fontWeight(.medium)
                              Text("sCorE: \(score)")
@@ -178,8 +178,9 @@ struct QuizInfoView: View{
                     }){
                         Text("Start Quiz")
                             .foregroundColor(.white)
-                            .padding(5).font(.system(size: 25))
+                            .padding(7).font(.system(size: 25))
                     }.background(Color.blue)
+                     .cornerRadius(5)
                     Text("questions: \(quiz.questions.count)").font(.system(size: 15))
                 }
             }
